@@ -4,4 +4,4 @@
 
 git add .
 git commit -am "$msg"
-git push origin master -f
+git push origin main -f

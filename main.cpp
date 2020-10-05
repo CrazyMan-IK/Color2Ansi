@@ -97,7 +97,7 @@ void usage(char *name)
   printf("\t--help this message\n");
   printf("\t--value=value\n");
   printf("\t--mode=mode\n\n");
-  printf("Value\t\t\t\tRGB, HEX or HSV value e.g. color2ansi -v 123 -v 111 -v 32 (123)");
+  printf("Value\t\tRGB, HEX or HSV value e.g. %s -v 123 -v 111 -v 32 (123)", name);
 }
 
 void HSVtoRGB(double H, double S, double V, RGB *rgb)

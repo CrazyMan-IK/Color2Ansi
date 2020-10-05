@@ -1,4 +1,5 @@
 deploy.sh
 manifest.json
+color2ansi
 /packages
 /bin

@@ -2,11 +2,11 @@ Package: color2ansi
 Version: 0.1
 Architecture: aarch64
 Maintainer: @CrazyMan-IK
-Description: Convert color to ansi escape truecolor code
+Description: Small utility to convert color to ANSI truecolor escape code
 Filename: dists/termux/extras/binary-aarch64/color2ansi_0.1_aarch64.deb
-Size: 111328
-MD5Sum: b396a13c9fc91e785e3b49f95eeaa25c
-SHA1: afc9c417c438f2a47f63f5f1897a634298f78c63
-SHA256: 96e412b9bb5aa0299dac119b9d72807189402d05cf53137b08a8547873ae5821
-SHA512: 36e103f6a77acc50e9c7316c33fb089132c11cf816a364d6829026fa6bb9424668bd87785b6ed73b3d37ea675226b4aeb5fd6416c755aee51fe0df905d73962b
+Size: 111344
+MD5Sum: 526158c986e61f5bd57def08d8b11d27
+SHA1: 59bcaa8ddbae83136667716a4dc52be55eb567b2
+SHA256: 1a9b08e823229dfe2c8f44ac01d94413309a1a8f154f9da230cc69210bd2324d
+SHA512: 6dbe5bea469cb340e8fb0d078401fad6922105016f448dda9994a98ae453af8fc3b41366791a19dcc7ec79021a2f8690452e1608c1b64016c15450a1ac95966a
 

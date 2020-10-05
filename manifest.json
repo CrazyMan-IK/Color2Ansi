@@ -1,0 +1,10 @@
+{
+  "name": "color2ansi",
+  "version": "0.1",
+  "arch": "all",
+  "maintainer": "@CrazyMan-IK",
+  "description": "Convert color to ansi escape truecolor code",
+  "files" : {
+    "color2ansi": "bin/color2ansi"
+  }
+}

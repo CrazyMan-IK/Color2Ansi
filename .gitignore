@@ -1,4 +1,5 @@
-deploy.sh
+deploy.zsh
+build.zsh
 manifest.json
 color2ansi
 /packages

@@ -5,20 +5,8 @@ Maintainer: @CrazyMan-IK
 Description: Small utility to convert color to ANSI truecolor escape code
 Filename: dists/termux/extras/binary-aarch64/color2ansi_0.1.5_aarch64.deb
 Size: 111548
-MD5Sum: 89aafd8afec6be7ce5241ac86cc8ea10
-SHA1: f5a72b70d2ad708c9eb35ce5fdcd07e4f2bffe19
-SHA256: b9baff294846ccf9b09316540f9d309505dc7e4fd55570abfce75ffabc605a56
-SHA512: 84abf3547ef8b1672a6a7195a227cfcef7b777aa6cd3f150664c0441a97137673d56510a41bf406eb8d08c0e7d7e0f5b66bbeba2befeaaff70df6e9f4c5ddb84
-
-Package: color2ansi
-Version: 0.1
-Architecture: aarch64
-Maintainer: @CrazyMan-IK
-Description: Small utility to convert color to ANSI truecolor escape code
-Filename: dists/termux/extras/binary-aarch64/color2ansi_0.1_aarch64.deb
-Size: 111348
-MD5Sum: 503a5a8e44769e77893ea601c258319c
-SHA1: 06bdc414d19b6e8ee0d4b9cf7a754264e68c34c6
-SHA256: e4a4dc24391ec1fd6ffeddd82e61de1d5338821c23d2afb607d469810933da88
-SHA512: acff64bc6b8fe1e60df0fb42a0d1c28821b4df1175a4b0cda52a2d7939ae1ce8e8e78d1956602656d07d2ce9f314797f3674bc103de3cf215e190fe98bbaaa59
+MD5Sum: 796c8ae146d772b6e4b1ef44e05e71f5
+SHA1: eee6bdb919c05dce0fbf104f6dab20d12abaf9e1
+SHA256: 0b54dba6080a2717f1e9f220be79674487a6d0ffd424c22394ffe5f81fe6bcf0
+SHA512: d57d2cf2dd59bb925e3b50511dfb6bf69389b2de948131927d620a5878b4f239069489330d6d807fa064d717e8c67f6797993c0b7491a31d65a7223486667120
 

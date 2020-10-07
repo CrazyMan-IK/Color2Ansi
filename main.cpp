@@ -102,7 +102,7 @@ void usage(char *name)
   printf("\t\"%s -v ffff00 -m 2 AnyText\" will return yellow colored \"AnyText\"\n", name);
 }
 
-void HSVtoRGB(double H, double S, double V, RGB *rgb)
+void HSVtoRGB(double H, double S, double V, RGB &rgb)
 {
     if(H < 0 || H > 360 || 
     	 S < 0 || S > 100 || 
@@ -142,9 +142,9 @@ void HSVtoRGB(double H, double S, double V, RGB *rgb)
         r = C, g = 0,b = X;
     }
 
-    rgb->r = (r + m) * 255;
-    rgb->g = (g + m) * 255;
-    rgb->b = (b + m) * 255;
+    rgb.r = (r + m) * 255;
+    rgb.g = (g + m) * 255;
+    rgb.b = (b + m) * 255;
 }
 
 int main(int argc, char **argv)
@@ -249,7 +249,7 @@ int main(int argc, char **argv)
 		}
 		case 3:
 		{
-			HSVtoRGB(values[0], values[1], values[2], &rgb);
+			HSVtoRGB(values[0], values[1], values[2], rgb);
 			
 			break;
 		}

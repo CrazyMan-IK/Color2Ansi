@@ -90,14 +90,16 @@ int strToInt(string str)
 
 void usage(char *name)
 {
-	printf("usage: %s\n", name);
+	printf("usage: %s [--help] [--value...] [--mode] [text]\n", name);
   printf("\t-h this message\n");
   printf("\t-v <value>\n");
   printf("\t-m [mode]\n");
   printf("\t--help this message\n");
-  printf("\t--value=value\n");
-  printf("\t--mode=mode\n\n");
-  printf("Value\t\tRGB, HEX or HSV value e.g. %s -v 123 -v 111 -v 32 (123)", name);
+  printf("\t--value=value RGB, HEX or HSV value\n");
+  printf("\t--mode=mode RGB, HEX or HSV mode (1, 2, 3)\n\n");
+  printf("Examples\n");
+  printf("\t\"%s -v 255 -v 255 -v 0 -m 1\" will return code yellow\n", name);
+  printf("\t\"%s -v ffff00 -m 2 AnyText\" will return yellow colored \"AnyText\"\n", name);
 }
 
 void HSVtoRGB(double H, double S, double V, RGB *rgb)

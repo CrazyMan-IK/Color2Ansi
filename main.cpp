@@ -4,7 +4,7 @@
 #include <string>
 #include <regex>
 
-#define VERSION "0.1.11"
+#define VERSION "0.1.12"
 
 using namespace std;
 

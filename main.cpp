@@ -242,6 +242,10 @@ int main(int argc, char **argv)
 				return 1;
 			}
 
+			if (strs[0].size() == 1) strs[0].insert(0, 1, strs[0][0]);
+			if (strs[1].size() == 1) strs[1].insert(0, 1, strs[1][0]);
+			if (strs[2].size() == 1) strs[2].insert(0, 1, strs[2][0]);
+
 			rgb.r = strToInt(strs[0]);
 			rgb.g = strToInt(strs[1]);
 			rgb.b = strToInt(strs[2]);

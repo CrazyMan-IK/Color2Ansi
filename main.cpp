@@ -169,7 +169,7 @@ int main(int argc, char **argv)
 			}
 			case (int)'v':
 			{
-				printf("Color2Ansi %s", VERSION);
+				printf("Color2Ansi %s\n", VERSION);
 				return -1;
 			}
 			case (int)'V':

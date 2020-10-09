@@ -4,9 +4,9 @@ Architecture: all
 Maintainer: @CrazyMan-IK
 Description: Small utility to convert color to ANSI truecolor escape code
 Filename: dists/termux/extras/binary-all/color2ansi_0.1.12_all.deb
-Size: 111680
-MD5Sum: 9cf59e5aa490fc16ca3077eb6da7ed86
-SHA1: 82cb74ddf8ed05eb444a2afcc20177e9dcf7539c
-SHA256: 64cb9d286189ef598114d62202cfbf9afc822b303443c55b51bcd0556e109f1f
-SHA512: 4091ea60b1934b2bfeaab38cbb1c18a6da5cbf8ace86919a37001e4378ba5afce7bd84a2cefc2304c48eb8699d839ddb27401005f445f45afc2fd6e71604a021
+Size: 111624
+MD5Sum: c64ced58737506f022a1557ff380d754
+SHA1: ebbf830ce6cfc72af64dfc4236243e988d6d8e92
+SHA256: c07defbd0f21d9fadfe3c0450e382a0a06a66822aae8d5b90c84804d3441f5f1
+SHA512: 3b95feb9d7da173890f22c4d021d79c58f23dbc591e665b259d266a7d3690af2e605514f85f51ad3fcd407f6218fa347b470ccbe8520e85eacb92ea2b23d2f47
 

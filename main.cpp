@@ -91,60 +91,61 @@ int strToInt(string str)
 void usage(char *name)
 {
 	printf("usage: %s [--help] [--value...] [--mode] [text]\n", name);
-  printf("\t-h this message\n");
-  printf("\t-v <value>\n");
-  printf("\t-m [mode]\n");
-  printf("\t--help this message\n");
-  printf("\t--value=value RGB, HEX or HSV value\n");
-  printf("\t--mode=mode RGB, HEX or HSV mode (1, 2, 3)\n\n");
-  printf("Examples\n");
-  printf("\t\"%s -v 255 -v 255 -v 0 -m 1\" will return code yellow\n", name);
-  printf("\t\"%s -v ffff00 -m 2 AnyText\" will return yellow colored \"AnyText\"\n", name);
+	printf("\t-h, --help\t\tthis message\n");
+	printf("\t-v, --value=<value>\tRGB, HEX or HSV value\n");
+	printf("\t-m, --mode=<mode>\tRGB, HEX or HSV mode (1, 2, 3)\n");
+	//printf("\t--help this message\n");
+	//printf("\t--value=value RGB, HEX or HSV value\n");
+	//printf("\t--mode=mode RGB, HEX or HSV mode (1, 2, 3)\n\n");
+	printf("Examples\n");
+	printf("\t\"%s -v 255 -v 255 -v 0 -m 1\" will return code yellow\n", name);
+	printf("\t\"%s -v ffff00 -m 2 AnyText\" will return yellow colored \"AnyText\"\n", name);
 }
 
 void HSVtoRGB(double H, double S, double V, RGB &rgb)
 {
-    if(H < 0 || H > 360 || 
-    	 S < 0 || S > 100 || 
-    	 V < 0 || V > 100)
-    {
-        printf("The given HSV values are not in valid range");
-        return;
-    }
-    double s = S / 100;
-    double v = V / 100;
-    double C = s * v;
-    double X = C * (1 - abs(fmod(H / 60.0, 2) - 1));
-    double m = v - C;
-    double r, g, b;
-    
-    if(H >= 0 && H < 60)
-    {
-        r = C, g = X, b = 0;
-    }
-    else if(H >= 60 && H < 120)
-    {
-        r = X, g = C, b = 0;
-    }
-    else if(H >= 120 && H < 180)
-    {
-        r = 0, g = C, b = X;
-    }
-    else if(H >= 180 && H < 240)
-    {
-        r = 0, g = X, b = C;
-    }
-    else if(H >= 240 && H < 300)
-    {
-        r = X, g = 0, b = C;
-    }
-    else{
-        r = C, g = 0,b = X;
-    }
+	if(H < 0 || H > 360 || 
+		 S < 0 || S > 100 || 
+		 V < 0 || V > 100)
+	{
+	  printf("The given HSV values are not in valid range");
+	  return;
+	}
+	double s = S / 100;
+	double v = V / 100;
+	double C = s * v;
+	double X = C * (1 - abs(fmod(H / 60.0, 2) - 1));
+	double m = v - C;
+	double r, g, b;
 
-    rgb.r = (r + m) * 255;
-    rgb.g = (g + m) * 255;
-    rgb.b = (b + m) * 255;
+	if(H >= 0 && H < 60)
+	{
+	  r = C, g = X, b = 0;
+	}
+	else if(H >= 60 && H < 120)
+	{
+	  r = X, g = C, b = 0;
+	}
+	else if(H >= 120 && H < 180)
+	{
+	  r = 0, g = C, b = X;
+	}
+	else if(H >= 180 && H < 240)
+	{
+	  r = 0, g = X, b = C;
+	}
+	else if(H >= 240 && H < 300)
+	{
+    r = X, g = 0, b = C;
+	}
+	else
+	{
+    r = C, g = 0,b = X;
+	}
+
+	rgb.r = (r + m) * 255;
+	rgb.g = (g + m) * 255;
+	rgb.b = (b + m) * 255;
 }
 
 int main(int argc, char **argv)
@@ -158,50 +159,50 @@ int main(int argc, char **argv)
 	{
 		switch(c)
 		{
-	  	case (int)'h':
-	    {
-	    	usage(argv[0]);
-	      return -1;
-	    }
-	    case (int)'v':
-	    {
-	    	if (values.size() > 3)
-	    	{
-	    		printf("The -v option must be 3 or less times\n");
-	    		return 1;
-	    	}
+			case (int)'h':
+			{
+				usage(argv[0]);
+				return -1;
+			}
+			case (int)'v':
+			{
+				if (values.size() > 3)
+				{
+					printf("The -v option must be 3 or less times\n");
+					return 1;
+				}
 
-	    	string str = removeStrInStr(optarg, "0x");
-	    	str = removeStrInStr(str, "#");
+				string str = removeStrInStr(optarg, "0x");
+				str = removeStrInStr(str, "#");
 
-	    	smatch sm;
-	    	regex_match(str, sm, regex("^([A-Fa-f0-9]{3,6})$"));
+				smatch sm;
+				regex_match(str, sm, regex("^([A-Fa-f0-9]{3,6})$"));
 
-	    	if (sm.size() > 0)
-	    	{
-	    		string result = sm[0];
-		    	if (result.length() >= 3)
-		    	{
-		    		posHex = result;
-		    	}
-	    	}
+				if (sm.size() > 0)
+				{
+					string result = sm[0];
+					if (result.length() >= 3)
+					{
+						posHex = result;
+					}
+				}
 
-	    	values.push_back(strToInt(str));
-	    	//printf("option 'v' selected: %s\n", optarg);
-	    	break;
-	    }
+				values.push_back(strToInt(str));
+				//printf("option 'v' selected: %s\n", optarg);
+				break;
+			}
 			case (int)'m':
-	    {
-	    	mode = strToInt(optarg);
-	    	//printf("option 'm' selected: %s\n", optarg);
-	    	break;
-	    }
-	    default:
-	    {
-	    	printf("%s -h to get help\n", argv[0]);
-	      return -1;
-	    }
-	  }
+			{
+				mode = strToInt(optarg);
+				//printf("option 'm' selected: %s\n", optarg);
+				break;
+			}
+			default:
+			{
+				printf("%s -h to get help\n", argv[0]);
+				return -1;
+			}
+		}
 	}
 
 	if (mode == 0 && values.size() > 0)
@@ -234,18 +235,18 @@ int main(int argc, char **argv)
 		case 2:
 		{
 			vector<string> strs = splitByLength(posHex, posHex.length() == 6 ? 2 : 1);
-   		if (strs.size() < 3)
-   		{
-   			printf("Invalid syntax, need RRGGBB or 0xRRGGBB or #RRGGBB or\n");
-   			printf("                     RGB or 0xRGB or #RGB\n");
-   			return 1;
-   		}
+			if (strs.size() < 3)
+			{
+				printf("Invalid syntax, need RRGGBB or 0xRRGGBB or #RRGGBB or\n");
+				printf("                     RGB or 0xRGB or #RGB\n");
+				return 1;
+			}
 
-   		rgb.r = strToInt(strs[0]);
-   		rgb.g = strToInt(strs[1]);
-   		rgb.b = strToInt(strs[2]);
+			rgb.r = strToInt(strs[0]);
+			rgb.g = strToInt(strs[1]);
+			rgb.b = strToInt(strs[2]);
 
-   		break;
+			break;
 		}
 		case 3:
 		{

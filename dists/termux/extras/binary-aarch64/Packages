@@ -4,9 +4,9 @@ Architecture: aarch64
 Maintainer: @CrazyMan-IK
 Description: Small utility to convert color to ANSI truecolor escape code
 Filename: dists/termux/extras/binary-aarch64/color2ansi_0.1.11_aarch64.deb
-Size: 111924
-MD5Sum: 14c98e6ad64f42d662cfa2665a534410
-SHA1: 6851e74b85995a9be811958e97aab3ea215cb7be
-SHA256: 9897baf61a86d939ea2103bedd7b0590571da0c20f4ef10b15abbb41ebe35469
-SHA512: 6b80dba76e639abf51909abadb8becb5811c118ae613ba6dd2092215eb5e824d52252aa9b13854359ae821db91a0e4b33193d12b9332ad1260dc4dc526bae0d6
+Size: 111928
+MD5Sum: 0b5a5d954fb812beac60e939d56a02ab
+SHA1: fd541dbc1447d58f6edf197f2f82e1737b76cb1c
+SHA256: 14106fa83d425e60f05c7c65ab3dc726be097aa0b7d5ecfbf3d92676feb0f222
+SHA512: 2c3738f18065f754bf10ba04dcf9329b73b93fde8c498eb9ae57442e109a2e7ed7b2c59a0e1ccb605970ac0338c3068376ddd5a29da519bb8c04b07a2d71b465
 

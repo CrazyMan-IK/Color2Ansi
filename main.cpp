@@ -4,6 +4,8 @@
 #include <string>
 #include <regex>
 
+#define VERSION "0.1.11"
+
 using namespace std;
 
 struct RGB
@@ -14,10 +16,11 @@ struct RGB
 };
 
 char hexes[6] = { 'a', 'b', 'c', 'd', 'e', 'f' };
-char const *opts = "hv:m:";
+char const *opts = "hvV:m:";
 const option long_opts[] = {
 	{ "help", 0, 0, 'h' },
-	{ "value", 1, 0, 'v' },
+	{ "version", 0, 0, 'v' },
+	{ "value", 1, 0, 'V' },
 	{ "mode", 1, 0, 'm' },
 	{ 0, 0, 0, 0 }
 };
@@ -165,6 +168,11 @@ int main(int argc, char **argv)
 				return -1;
 			}
 			case (int)'v':
+			{
+				printf("Color2Ansi %s", VERSION);
+				return -1;
+			}
+			case (int)'V':
 			{
 				if (values.size() > 3)
 				{

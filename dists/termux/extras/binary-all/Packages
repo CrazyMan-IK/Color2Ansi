@@ -1,0 +1,12 @@
+Package: color2ansi
+Version: 0.1.12
+Architecture: all
+Maintainer: @CrazyMan-IK
+Description: Small utility to convert color to ANSI truecolor escape code
+Filename: dists/termux/extras/binary-all/color2ansi_0.1.12_all.deb
+Size: 111660
+MD5Sum: 567141e98c3b8db3ea3271f903753d2b
+SHA1: 5cddbac9a0b90abbf0fc88ec69081599120ac2fb
+SHA256: 5166008495681c9a91b9e381c3f941c6b5207e53e44f465953448cf5f0474c0a
+SHA512: 6db4d2a47bd98b9e7a4e032e001345be9c28d0f100211bc5db15fb16e81e2df6152cb0a97720d2d6005e236f9ee3e236a24fdc281db44d52e53cecdca2b680d4
+

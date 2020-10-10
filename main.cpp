@@ -165,12 +165,12 @@ int main(int argc, char **argv)
 			case (int)'h':
 			{
 				usage(argv[0]);
-				return -1;
+				return 0;
 			}
 			case (int)'v':
 			{
 				printf("Color2Ansi %s\n", VERSION);
-				return -1;
+				return 0;
 			}
 			case (int)'V':
 			{
@@ -208,7 +208,7 @@ int main(int argc, char **argv)
 			default:
 			{
 				printf("%s -h to get help\n", argv[0]);
-				return -1;
+				return 1;
 			}
 		}
 	}
